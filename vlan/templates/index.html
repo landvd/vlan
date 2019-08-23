@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>广电厚街分公司VLAN设置系统</title>
+<script language="javascript" src="Validator.js"></script>
+</head>
+
+<body>
+<table width="100%" height="808" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="100%" height="336" border="1" cellpadding="1" cellspacing="1">
+      <tr>
+	    <td width="26%" class="T1"  align="center"><?php echo @$_COOKIE['name'].@$_COOKIE['remark'];?><a href="index.php?function=del_user">注销登陆</a>Ver1.5<a href="com.android.chrome_339608700.apk">浏览器下载</a></td>
+        <td height="49" align="left" class="warring">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EOC地址查询</td>
+      </tr>
+      <tr>
+        <td width="26%" class="T1">请输入EOC地址名:<br /></td>
+        <td width="74%"><label for="textfield"></label>
+          
+          　
+            
+            <label for="radio"></label>
+<form action="setvlan.php" method="post" name="form1" target="_blank" id="form1" onSubmit="return Validator.Validate(this,1)">
+  <p>
+    <input name="eoc_address" type="text" class="bt1" id="eoc_address" dataType="Require" msg="EOC地址不能为空"/>
+    </p>
+  <p>　　　　　　　　
+    <input name="button" type="submit" class="bt" id="button" value="查询" onClick="Validator.Validate(document.getElementById('demo'))" />
+  </p>
+        </form></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>
+		 <table width="100%" height="336" border="1" cellpadding="1" cellspacing="1">
+        <tr>
+          <td height="49" colspan="2" align="center" class="warring">加入14服务器</td>
+        </tr>
+        <tr>
+          <td width="26%" class="T1"><p>请输入要加入的EOC局端地址</p></td>
+          <td width="74%" class="T1"><label for="textfield3"></label>
+            <form action="addserver.php" method="post" name="form2" target="_blank" id="form3" onsubmit="return Validator.Validate(this,1)">
+              <p>
+                EOC局端地址搜索范围：              </p>
+              <p>
+                <input name="eoc_address" type="text" class="bt1" id="eoc_address" datatype="Require" msg="EOC局端地址不能为空"/>
+              </p>
+              <p>　　　  　
+                <input name="button3" type="submit" class="bt" id="button3" value="加入服务器" />
+              </p>
+            </form>
+          </td>
+        </tr>
+      </table>
+	<table width="100%" height="336" border="1" cellpadding="1" cellspacing="1">
+      <tr>
+        <td height="49" colspan="2" align="center" class="warring">终端信息查询</td>
+      </tr>
+      <tr>
+        <td width="26%" class="T1"><p>请输入终端MAC:</td>
+        <td width="74%"><label for="textfield2"></label>
+          <form action="queryvlan.php" method="post" name="form2" target="_blank" id="form2" onSubmit="return Validator.Validate(this,1)">
+            <p>
+              <input name="moden_mac" type="text" class="bt1" id="moden_mac" dataType="Require" msg="EOC MAC不能为空"/>
+              </p>
+            <p>　　　　　　　　
+              <input name="button2" type="submit" class="bt" id="button2" value="查询" />
+            </p>
+          </form>
+          　</td>
+      </tr>
+    </table>
+      <table width="100%" height="336" border="1" cellpadding="1" cellspacing="1">
+        <tr>
+          <td height="49" colspan="2" align="center" class="warring">向导模式(自动搜索版)</td>
+        </tr>
+        <tr>
+          <td width="26%" class="T1"><p>请输入要搜索的MAC和地址</p></td>
+          <td width="74%" class="T1"><label for="textfield3"></label>
+            <form action="newsmartvlan.php" method="post" name="form2" target="_blank" id="form3" onsubmit="return Validator.Validate(this,1)">
+              <p>12位设备MAC：</p>
+              <p>
+  <input name="moden_mac" type="text" class="bt1" id="moden_mac" dataType="LimitB" min="12" maxlength="17" msg="请输入正确的12位MAC地址"/>
+              </p>
+              <p>
+                光机地址搜索范围：              </p>
+              <p>
+                <input name="eoc_address" type="text" class="bt1" id="eoc_address" datatype="Require" msg="光机地址不能为空"/>
+              </p>
+              <p>　　　  　
+                <input name="button3" type="submit" class="bt" id="button3" value="新装设备" />
+              </p>
+            </form>
+          </td>
+        </tr>
+      </table>
+	   <table width="100%" height="336" border="1" cellpadding="1" cellspacing="1">
+        <tr>
+          <td height="49" colspan="2" align="center" class="warring">向导模式(手动搜索版)</td>
+        </tr>
+        <tr>
+          <td width="26%" class="T1"><p>请输入要搜索的MAC和地址</p></td>
+          <td width="74%" class="T1"><label for="textfield3"></label>
+            <form action="newvlan.php" method="post" name="form2" target="_blank" id="form3" onsubmit="return Validator.Validate(this,1)">
+              <p>12位设备MAC：</p>
+              <p>
+  <input name="moden_mac" type="text" class="bt1" id="moden_mac" dataType="LimitB" min="12" maxlength="17" msg="请输入正确的12位MAC地址"/>
+              </p>
+              <p>
+                光机地址搜索范围：              </p>
+              <p>
+                <input name="eoc_address" type="text" class="bt1" id="eoc_address" datatype="Require" msg="光机地址不能为空"/>
+              </p>
+              <p>　　　  　
+                <input name="button3" type="submit" class="bt" id="button3" value="新装设备" />
+              </p>
+            </form>
+          </td>
+        </tr>
+      </table>
+	   <table width="100%" height="336" border="1" cellpadding="1" cellspacing="1">
+        <tr>
+          <td height="49" colspan="2" align="center" class="warring">增加EOC局端</td>
+        </tr>
+        <tr>
+          <td width="26%" class="T1"><p>请输入要增加的EOC局端地址</p></td>
+          <td width="74%" class="T1"><label for="textfield3"></label>
+            <form action="seteoc.php" method="post" name="form2" target="_blank" id="form3" onsubmit="return Validator.Validate(this,1)">
+              <p>
+                EOC局端地址搜索范围：              </p>
+              <p>
+                <input name="eoc_address" type="text" class="bt1" id="eoc_address" datatype="Require" msg="EOC局端地址不能为空"/>
+              </p>
+              <p>　　　  　
+                <input name="button3" type="submit" class="bt" id="button3" value="增加局端" />
+              </p>
+            </form>
+          </td>
+        </tr>
+      </table>
+    <p>&nbsp;</p></td>
+  </tr>
+</table>
+	   <table width="100%" height="336" border="1" cellpadding="1" cellspacing="1">
+        <tr>
+          <td height="49" colspan="2" align="center" class="warring">光纤入户</td>
+        </tr>
+        <tr>
+          <td width="26%" class="T1"><p>请选择OLT管理的地址</p></td>
+          <td width="74%" class="T1"><label for="textfield3"></label>
+            <form action="fibre.php" method="post" name="form2" target="_blank" id="form3">
+              <p>
+                EOC局端地址搜索范围：              </p>
+              <p>
+                <select name="fibre"  class="bt1">
+				<option value="海逸豪庭尚都二期">海逸豪庭尚都二期</option>	
+
+				</select>
+              </p>
+              <p>　　　  　
+                <input name="button3" type="submit" class="bt" id="button3" value="提交选择" />
+              </p>
+            </form>
+          </td>
+        </tr>
+      </table>
+    <p>&nbsp;</p></td>
+  </tr>
+</table>
+</table>
+<table width="100%" height="30" border="1">
+<tr>
+<td height="60" align="center" class="warring" colspan="2">设备安装记录查询</td>
+</tr>
+<tr>
+<td height="50" width="50" align="center" class="warring2">按记录查询:</td>
+<td height="50" class="warring"><a href="log.txt" >点击查看所有安装记录</a>&nbsp&nbsp&nbsp<a href="eoc.txt" >点击查看新增EOC局端记录</a>&nbsp&nbsp&nbsp<a href="BackUp_results.txt" >局端无法连接记录</a></td>
+</tr>
+<tr>
+<form action="log.php" method="POST">
+<td height="50" width="50" align="center" class="warring2">按日期查询:</td>
+<td height="50" width="50" class="warring2">开始时间:<input id="start" name="start" type="date">结束时间:<input id="stop" name="stop" type="date"> <input type="submit" value="查询" class="bt" /></td>
+</form>
+</tr>
+</table>
+<br><br><br><br><br><br><br>
+</body>
+</html>

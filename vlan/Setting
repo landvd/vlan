@@ -1,0 +1,28 @@
+[Basic_Setting] #基本设置
+SystemName="VLAN设置系统" #系统名称
+OriginalUser="admin" #默认EOC登陆名
+OriginalPass="admin" #默认EOC登陆密码
+NewUser="admin" #新EOC登陆名
+NewPass="admin824" #新EOC登陆密码
+AllowChangePass="1" #登陆时是否自动修改EOC密码
+
+[Database_Setting]#数据库设置
+DatabaseAddress="localhost" #数据库地址
+DatabaseUser="root" #数据库用户名
+DatabasePass="root" #数据库密码
+DatabaseName="vlan_db" #数据库名称
+
+[Ftp_Setting]#FTP设置
+Ftp_User="wifi74"
+Ftp_Pass="wifi74"
+Ftp_Ip="10.202.222.100"
+File_Ver="V2.4.24b"
+File_Name="EOC74_V2.4.24b_181112_A009.bin"
+
+[Vlan_Range]#Vlan范围设置
+Yd="2001-2499"
+Lt="1001-1880"
+Zy="3301-3699"
+
+
+
